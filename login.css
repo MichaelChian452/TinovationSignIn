@@ -1,0 +1,56 @@
+#main
+{
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    background-image: url(https://cdn.discordapp.com/attachments/751703234459992145/817501537487028274/e2.png);
+}
+
+#login
+{
+    padding: 10px 10px 10px 10px;
+    background-color: aliceblue;
+    margin: auto;
+    width: 50%;
+    height: 50vh;
+    border-radius: 15px;
+}
+
+label
+{
+    width: 100px;
+    padding: 5px 0px 0px 5px;
+    margin: 5px 10px 10px 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+h3
+{
+    text-align: center;
+}
+
+input
+{
+    width: 500px;
+    padding: 5px 0px 0px 5px;
+    margin: 5px 10px 5px 10px;
+    font-size: 16px;
+}
+
+#submit
+{
+    background-color: lightskyblue;
+    border-radius: 5px;
+    border: 1px;
+    font-size: 16px;
+    padding: 15px 10px 15px 10px;
+    margin-left: 45%;
+    
+}
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+}
