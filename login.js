@@ -3,11 +3,10 @@ var signedUp = false;
 
 
 function submitRegister(){
-    console.log("firebase");
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     
-    console.log(email + " " + password);
+    console.log(`Email: ${email}\nPassword: ${password}`);
     firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in 
