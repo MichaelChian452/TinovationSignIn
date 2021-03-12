@@ -23,7 +23,7 @@ function submitRegister(){
   });
 }
 
-function submitSignIn(){
+function submit(){
     var email = document.getElementById("email2").value;
     var password = document.getElementById("password2").value;
     firebase.auth().signInWithEmailAndPassword(email, password)
