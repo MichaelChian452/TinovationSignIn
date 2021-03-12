@@ -1,9 +1,10 @@
+
 #main
 {
     width: 100%;
     height: 100vh;
     padding-top: 100px;
-    background-image: url(https://cdn.discordapp.com/attachments/751703234459992145/817501537487028274/e2.png);
+    /*background-image: url(https://cdn.discordapp.com/attachments/751703234459992145/817501537487028274/e2.png);*/
 }
 
 #login
@@ -32,10 +33,13 @@ h3
 
 input
 {
-    width: 500px;
     padding: 5px 0px 0px 5px;
     margin: 5px 10px 5px 10px;
     font-size: 16px;
+}
+
+input.textBox{
+    width: 500px;
 }
 
 #submit
