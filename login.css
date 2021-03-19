@@ -3,16 +3,16 @@
     width: 100%;
     height: 100vh;
     padding-top: 100px;
-    background-image: url(https://cdn.discordapp.com/attachments/751703234459992145/817501537487028274/e2.png);
+    background-image: url(https://cdn.discordapp.com/emojis/748603198645862520.png?v=1);
 }
 
 #login
 {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 40px 10px;
     background-color: aliceblue;
     margin: auto;
     width: 50%;
-    height: 50vh;
+    height: auto;
     border-radius: 15px;
 }
 
@@ -30,21 +30,35 @@ h3
     text-align: center;
 }
 
+#email, #password
+{
+    width: 65%;
+}
+
+
+
 input
 {
-    width: 500px;
     padding: 5px 0px 0px 5px;
     margin: 5px 10px 5px 10px;
     font-size: 16px;
+    display: inline-block;
+}
+
+#submit:hover
+{
+    background-color: #2d945a;
+    cursor: pointer;
 }
 
 #submit
 {
-    background-color: lightskyblue;
+    background-color: #32a866;
+    color: white;
     border-radius: 5px;
     border: 1px;
     font-size: 16px;
-    padding: 15px 10px 15px 10px;
+    padding: 10px 20px 10px 20px;
     margin-left: 45%;
     
 }
@@ -53,4 +67,5 @@ body
 {
     padding: 0px;
     margin: 0px;
+    font-family: "Alegreya", Helvetica;
 }
