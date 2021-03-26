@@ -3,8 +3,8 @@ var signedUp = false;
 
 
 function submitRegister(){
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value; // not done
+    var password = document.getElementById("password").value; // not done
     
     console.log(`Email: ${email}\nPassword: ${password}`);
     firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -23,8 +23,8 @@ function submitRegister(){
 }
 
 function submit(){
-    var email = document.getElementById("email2").value;
-    var password = document.getElementById("password2").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
     firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in
