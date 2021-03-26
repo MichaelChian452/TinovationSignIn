@@ -3,8 +3,9 @@ var signedUp = false;
 
 
 function submitRegister(){
+  
     var email = document.getElementById("email").value; // not done
-    var password = document.getElementById("password").value; // not done
+    var password = document.getElementById("pwd").value; // not done
     
     console.log(`Email: ${email}\nPassword: ${password}`);
     firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -46,10 +47,12 @@ firebase.auth().onAuthStateChanged((user) => {
     var uid = user.uid;
     console.log(uid);
     if(signedUp){
-        var name = document.getElementById("name").value;
-        var preferences = document.getElementById("preferences").value;
-      
-        writeUserData(uid, name, preferences);
+        var firstName = document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
+        var vegetables = document.getElementById("vegetables").value;
+        var meat = document.getElementById("meat").value;
+        var dairy = document.getElementById("dairy").value;
+        writeUserData(uid, firstName, lastName, vegetables, meat, dairy);
         
     }
     // ...
@@ -69,9 +72,12 @@ function logOut(){
     });
 }
 
-function writeUserData(userId, name, preferences) {
+function writeUserData(userId, firstName, lastName, vegetables, meat, dairy) {
   firebase.database().ref('users/' + userId).set({
-    name: name,
-    preferences: preferences
+    firstName: firstName,
+    lastName: lastName,
+    vegetables: vegetables,
+    meat: meat,
+    dairy: dairy
   });
 }
