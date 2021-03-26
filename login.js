@@ -5,27 +5,33 @@ var signedUp = false;
 function submitRegister(){
   
     var email = document.getElementById("email").value; // not done
-    var password = document.getElementById("pwd").value; // not done
+    var password1 = document.getElementById("pwd").value; 
+    var password2 = document.getElementById("pwd2").value;
+  if(password1 != password2){
+    console.log(`Passwords don't match`);
+  }else{
+    console.log(`Email: ${email}\nPassword: ${password1}`);
+      firebase.auth().createUserWithEmailAndPassword(email, password1)
+    .then((userCredential) => {
+      // Signed in 
+      user = userCredential.user;
+      signedUp = true;
+      // ...
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+      // ..
+    });
+  }
     
-    console.log(`Email: ${email}\nPassword: ${password}`);
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in 
-    user = userCredential.user;
-    signedUp = true;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.log(errorMessage);
-    // ..
-  });
+    
 }
 
 function submit(){
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+    var email = document.getElementById("login-email").value;
+    var password = document.getElementById("login-password").value;
     firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
     // Signed in
